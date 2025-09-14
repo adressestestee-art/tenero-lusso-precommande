@@ -3,151 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TENERO LUSSO | L'élégance minimaliste</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Précommande</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <div id="cookie-banner" style="display: none;">
-        <p>
-            En poursuivant votre navigation sur ce site, vous acceptez l'utilisation de cookies pour améliorer votre expérience et à des fins statistiques.
-        </p>
-        <button id="accept-cookies">J'accepte</button>
-    </div>
-
     <header>
-        <nav>
-            <a href="index.html" class="logo">TENERO LUSSO</a>
-            <div class="menu-toggle" id="menu-toggle">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-            <div class="nav-links">
-                <a href="#introduction">La marque</a>
-                <a href="#produits">Produits</a>
-                <a href="#temoignages">Témoignages</a>
-                <a href="#contact">Contact</a>
-            </div>
-            <div class="menu-overlay"></div>
-        </nav>
+        <h1>Tenero Lusso</h1>
+        <p>Découvrez notre nouvelle collection</p>
     </header>
 
-    <main>
-        <section class="hero-carousel">
-            <div class="carousel-item active">
-                <img src="https://i.ibb.co/L5r6n3q/hero1.jpg" alt="Collection de luxe 1">
-            </div>
-            <div class="carousel-item">
-                <img src="https://i.ibb.co/VMy4kC5/hero2.jpg" alt="Collection de luxe 2">
-            </div>
-            <div class="carousel-item">
-                <img src="https://i.ibb.co/k5J0f5Q/hero3.jpg" alt="Collection de luxe 3">
-            </div>
-        </section>
+    <main class="container">
         
-        <section id="introduction" class="introduction-section animate-on-scroll">
-            <h2>L'élégance dans sa forme la plus pure.</h2>
-            <p>
-                Tenero Lusso est l'incarnation du luxe discret. Nous créons des pièces intemporelles où chaque détail est pensé pour une élégance sans effort. Nos collections sont le fruit d'un savoir-faire artisanal et d'une passion pour les matières nobles, conçues pour ceux qui apprécient la beauté de la simplicité.
-            </p>
-            <a href="#" class="cta-button">Découvrir la collection</a>
+        <section class="product-section left">
+            <div class="product-image">
+                <img src="https://via.placeholder.com/600x800.png?text=Image+Produit+1" alt="Produit 1">
+            </div>
+            <div class="product-details">
+                <h2>Article 1</h2>
+                <p class="description">Une description détaillée de l'article 1. Mettez en avant ses caractéristiques uniques et pourquoi il est indispensable.</p>
+                <span class="price">€129.00</span>
+            </div>
         </section>
 
-        <section id="temoignages" class="testimonial-section animate-on-scroll">
-            <h2>Ils nous font confiance</h2>
-            <div class="testimonial-container">
-                <div class="testimonial">
-                    <blockquote>"Des pièces d'une qualité exceptionnelle. Une élégance intemporelle et un service client impeccable."</blockquote>
-                    <p>— Marie, Paris</p>
-                </div>
-                <div class="testimonial">
-                    <blockquote>"Le minimalisme réinventé. Chaque article est un investissement qui dure. Je suis fan !"</blockquote>
-                    <p>— Julien, Montréal</p>
-                </div>
-                <div class="testimonial">
-                    <blockquote>"J'ai enfin trouvé la marque qui correspond à mes valeurs : luxe, durabilité et design épuré."</blockquote>
-                    <p>— Léa, Bruxelles</p>
-                </div>
+        <section class="product-section right">
+            <div class="product-details">
+                <h2>Article 2</h2>
+                <p class="description">Une description détaillée de l'article 2. Mettez en avant ses caractéristiques uniques et pourquoi il est indispensable.</p>
+                <span class="price">€149.00</span>
+            </div>
+            <div class="product-image">
+                <img src="https://via.placeholder.com/600x800.png?text=Image+Produit+2" alt="Produit 2">
             </div>
         </section>
+
+        <section class="preorder-form-container">
+            <h2>Précommandez maintenant</h2>
+            <form id="preorder-form">
+                <div class="form-group">
+                    <label for="name">Nom complet</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Adresse e-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="product">Sélectionnez votre article</label>
+                    <select id="product" name="product" required>
+                        <option value="">-- Choisissez un article --</option>
+                        <option value="Article 1">Article 1 - €129.00</option>
+                        <option value="Article 2">Article 2 - €149.00</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="size">Sélectionnez votre taille</label>
+                    <select id="size" name="size" required>
+                        <option value="">-- Choisissez une taille --</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="address">Adresse de livraison</label>
+                    <textarea id="address" name="address" rows="4" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-button">Précommander</button>
+            </form>
+            <p id="success-message" class="hidden">Votre précommande a bien été enregistrée ! Nous vous contacterons bientôt.</p>
+        </section>
+
     </main>
 
     <footer>
-        <div class="newsletter-container">
-            <h3>Restez à jour</h3>
-            <p>Abonnez-vous à notre newsletter pour des nouveautés et des offres exclusives.</p>
-            <form action="#" method="POST">
-                <input type="email" placeholder="Votre email" required>
-                <button type="submit">S'abonner</button>
-            </form>
-        </div>
-        <div class="footer-links">
-            <a href="#">Conditions générales</a>
-            <a href="#">Politique de confidentialité</a>
-            <a href="#">Instagram</a>
-        </div>
-        <p class="copyright">
-            © 2025 Tenero Lusso. Tous droits réservés.
-        </p>
+        <p>&copy; 2025 Tenero Lusso. Tous droits réservés.</p>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Script pour le menu mobile
-            const menuToggle = document.getElementById('menu-toggle');
-            const navLinks = document.querySelector('.nav-links');
-            const menuOverlay = document.querySelector('.menu-overlay');
-
-            function toggleMenu() {
-                menuToggle.classList.toggle('active');
-                navLinks.classList.toggle('active');
-                menuOverlay.classList.toggle('active');
-            }
-
-            menuToggle.addEventListener('click', toggleMenu);
-            menuOverlay.addEventListener('click', toggleMenu);
-
-            // Script pour le carrousel
-            const carouselItems = document.querySelectorAll('.carousel-item');
-            let currentItem = 0;
-
-            function showNextItem() {
-                carouselItems[currentItem].classList.remove('active');
-                currentItem = (currentItem + 1) % carouselItems.length;
-                carouselItems[currentItem].classList.add('active');
-            }
-            setInterval(showNextItem, 5000); // Change d'image toutes les 5 secondes
-
-            // Script pour le bandeau de cookies
-            const cookieBanner = document.getElementById('cookie-banner');
-            const acceptButton = document.getElementById('accept-cookies');
-
-            if (!localStorage.getItem('cookies-accepted')) {
-                cookieBanner.style.display = 'flex';
-            }
-
-            acceptButton.addEventListener('click', () => {
-                localStorage.setItem('cookies-accepted', 'true');
-                cookieBanner.style.display = 'none';
-            });
-            
-            // Script pour les animations au défilement
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, { threshold: 0.2 });
-
-            document.querySelectorAll('.animate-on-scroll').forEach(section => {
-                observer.observe(section);
-            });
-        });
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
